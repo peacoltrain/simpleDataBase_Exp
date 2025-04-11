@@ -27,5 +27,7 @@ I will now go over each of the tables in this database, along with an functions 
    This is where the guest users could insert their orders. *Note: This is a rough idea of what that would look like. An official version would include details such as billing information, but As I don't have any equipment in the first place. I figured that was an unneeded future addition.* There is nothing super special about this Table. Standard 'Admin Acces' and an guest 'insert only policy'
 
    **Functions**
-   
+   I only started experimenting with functions after I failed to get the 'insert only policy to work'. Apparently supabase has a really hard time allowing guest users to only insert (not read) a table. After a few hours of struggling I discovered supabases function capablities. After some quick learning I created a function that would allow me to do the same thing as my 'insert only policy'. Looking retrospectavly, I wish I had implemented more of these supabase function. They allow for much cleaner code and better table comparisons.
+
+*Access code
    
