@@ -21,4 +21,11 @@ I will now go over each of the tables in this database, along with an functions 
    This table ties the previous two tables together. It is simply the type and where it is stored. This table has a 'Admin All' and 'Guest Read policy.' Because I set equipment_type foregin key to not be null it is important to add the new type prior to adding the individual equipemnt it this table.
 
    **Table: Reservation_equipment**
-   This tables purpose is to help facilitate the many-many relationship between reservations and equipment. One event can have many pieces of equipment and one piece of equipment can have many reservations(While not at the same time. We get to that later.)
+   This tables purpose is to help facilitate the many-many relationship between reservations and equipment. One event can have many pieces of equipment and one piece of equipment can have many reservations (While not at the same time. We get to that later.). This had an 'Admin All' policy allowing an adimin to retroactilvy alter orders. It was also supposed to have a 'insert only policy' but that had some issues.
+
+   **Table: Reservations**
+   This is where the guest users could insert their orders. *Note: This is a rough idea of what that would look like. An official version would include details such as billing information, but As I don't have any equipment in the first place. I figured that was an unneeded future addition.* There is nothing super special about this Table. Standard 'Admin Acces' and an guest 'insert only policy'
+
+   **Functions**
+   
+   
