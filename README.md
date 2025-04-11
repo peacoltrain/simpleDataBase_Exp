@@ -29,5 +29,13 @@ I will now go over each of the tables in this database, along with an functions 
    **Functions**
    I only started experimenting with functions after I failed to get the 'insert only policy to work'. Apparently supabase has a really hard time allowing guest users to only insert (not read) a table. After a few hours of struggling I discovered supabases function capablities. After some quick learning I created a function that would allow me to do the same thing as my 'insert only policy'. Looking retrospectavly, I wish I had implemented more of these supabase function. They allow for much cleaner code and better table comparisons.
 
-# Access code
+# Application Code
+
+I have the most experience with terminal run software so it may look ruff around the edges. I have my string file which contains some of the strings that I would use. I also have UserConnection and AdminConnection. User connection uses my .env file(Not included in this repository) to connect to supabase. It then has the options view and reserve. View simple allows the guest to view what types of equipment we have as well as its cost and event what they look like. Reserve allows a user to reserve a piece of equipment.
+
+Admin Connection asks for a email and password to establish an authorized connection with supabase. There are then a few premade functions that help the admin view the reservations, equipment table, add equipment, and equipment type. More helper function could could also be created.
+
+
+# Future Plans:
+There are so many things that I would like to implement. I would first and formost, like to move most of the logic into the supabase functions for cleaner code. I would also like to better flush out the application code to hunt for bugs and edge cases. I realized if you were doing an order for multiple pieces of equipment you would actually end up with mutiple lines in the reservation table, instead of having mutiple pieces of equipment under one order number. I also think it would be really cool if I could made inputing information easier. It occured to me while trying to figure out why my insert policy wasn't working that typeing in things like datatime is a real pain. If you thing of something that would thing would be great to see implemented let me know.
    
