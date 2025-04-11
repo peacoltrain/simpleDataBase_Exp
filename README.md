@@ -29,5 +29,5 @@ I will now go over each of the tables in this database, along with an functions 
    **Functions**
    I only started experimenting with functions after I failed to get the 'insert only policy to work'. Apparently supabase has a really hard time allowing guest users to only insert (not read) a table. After a few hours of struggling I discovered supabases function capablities. After some quick learning I created a function that would allow me to do the same thing as my 'insert only policy'. Looking retrospectavly, I wish I had implemented more of these supabase function. They allow for much cleaner code and better table comparisons.
 
-*Access code
+# Access code
    
